@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.6">
+  <world name="default">
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <pose>0 0 0.33 0 0 0</pose>
+      <uri>model://dolly</uri>
+    </include>
+    <model name="box">
+        <static>true</static>
+        <link name='main'>
+          <collision name='collision'>
+            <pose>5.0 0 0.05 0 0 0</pose>
+            <geometry>
+              <box>
+                <size>1 1 1</size>
+              </box>
+            </geometry>
+          </collision>
+          <visual name='visual'>
+	    <pose>5.0 0 0.05 0 0 0</pose>
+            <geometry>
+              <box>
+                <size>1 1 1</size>
+              </box>
+            </geometry>
+          </visual>
+        </link>
+    </model>
+  </world>
+</sdf>
